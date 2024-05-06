@@ -6,7 +6,6 @@ from sklearn.metrics import mean_squared_error
 from sklearn.svm import SVR
 import matplotlib.pyplot as plt
 
-
 # np.random.seed(42)
 num_data_points = 100
 days = np.arange(1, num_data_points + 1)
@@ -18,7 +17,7 @@ data['Days'] = data['Days'].astype(float)
 X = data[['Days']]
 Y = data['Prices']
 
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2,) # random_state=42 was deleted
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, )  # random_state=42 was deleted
 
 scaler = MinMaxScaler()
 X_train_scaled = scaler.fit_transform(X_train)
@@ -41,13 +40,12 @@ new_days_scaled = scaler.transform(new_days_df)
 new_prices = model.predict(new_days_scaled)
 print(new_prices)
 
-
 plt.figure(figsize=(15, 10))
-plt.scatter(X_train, Y_train, color='blue', label = 'Training Data')
-plt.scatter(X_test, Y_test, color='green', label = 'Testing Data')
-plt.scatter(new_days, new_prices, color='pink', label = 'Predicting Data')
-plt.plot(X_train, Y_pred_train, color='red', label = 'Training Prediction')
-plt.plot(X_test, Y_pred_test, color='orange', label = 'Testing Prediction')
+plt.scatter(X_train, Y_train, color='blue', label='Training Data')
+plt.scatter(X_test, Y_test, color='green', label='Testing Data')
+plt.scatter(new_days, new_prices, color='pink', label='Predicting Data')
+plt.plot(X_train, Y_pred_train, color='red', label='Training Prediction')
+plt.plot(X_test, Y_pred_test, color='orange', label='Testing Prediction')
 plt.xlabel('Days')
 plt.ylabel('Prices')
 plt.title('Stock Price Prediction')
