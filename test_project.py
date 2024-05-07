@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.svm import SVR
-from stock import train_model, predict_prices, display_results
+from project import train_model, predict_prices, display_results
 
 
 def test_train_model():
@@ -50,5 +50,4 @@ def test_display_results():
     new_days = np.arange(num_data_points + 1, num_data_points + 11)
     new_prices = predict_prices(model, scaler, new_days)
 
-    # Testing types of outputs (no assertion on plot)
     assert isinstance(display_results(X_train, y_train, X_test, y_test, y_pred_train, y_pred_test, new_days, new_prices), None.__class__)
