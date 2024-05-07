@@ -1,5 +1,5 @@
 # Stock Price Prediction
-#### Video Demo: 
+#### Video Demo: https://www.youtube.com/watch?v=A9_SUzB5MRc
 
 This project is focused on predicting stock prices using a Support Vector Regression (SVR) model. The `stock.py` script contains the code implementation for this prediction task. Below is a brief overview of the script and its functionalities.
 
