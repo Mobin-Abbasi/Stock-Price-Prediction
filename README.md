@@ -5,6 +5,8 @@ This project is focused on predicting stock prices using a Support Vector Regres
 
 ## Description:
 
+![image](https://github.com/user-attachments/assets/728d22f9-be8d-422a-a0ff-857a69a475f6)
+
 ### Dependencies
 
 The following dependencies are required to run the script:
